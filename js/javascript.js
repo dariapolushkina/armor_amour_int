@@ -1,19 +1,19 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
-    const bwScreen = document.querySelector('.bw');
-    const pinkScreen = document.querySelector('.pink');
-    const knightButton = document.querySelector('.knight_bw');
+    const bw = document.querySelector('.knight.bw');
+    const pink = document.querySelector('.knight.pink');
+    const clickArea = document.querySelector('.knight_bw .knight_svg'); 
 
-    knightButton.addEventListener("click", function () {
-        const isPinkActive = pinkScreen.classList.contains("active");
-
-        if (isPinkActive) {
-            pinkScreen.classList.remove("active");
-            bwScreen.classList.add("active");
+    clickArea.addEventListener("click", function () {
+        if (bw.style.opacity === "1" || bw.style.opacity === "") {
+            bw.style.opacity = "0";
+            bw.style.pointerEvents = "none";
+            pink.style.opacity = "1";
+            pink.style.pointerEvents = "auto";
         } else {
-            pinkScreen.classList.add("active");
-            bwScreen.classList.remove("active");
+            bw.style.opacity = "1";
+            bw.style.pointerEvents = "auto";
+            pink.style.opacity = "0";
+            pink.style.pointerEvents = "none";
         }
     });
 });
