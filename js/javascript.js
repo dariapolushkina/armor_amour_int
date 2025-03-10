@@ -1,27 +1,19 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     const buttons = document.querySelectorAll('button');
-//     const sections = document.querySelectorAll('div[class^="section"]');
-
-//     function showSection(sectionToShow) {
-//         sections.forEach(section => {
-//             if (section.classList.contains(sectionToShow)) {
-//                 section.classList.remove('sectionnone');
-//             } else {
-//                 section.classList.add('sectionnone');
-//             }
-//         });
-//     }
 
 
-//     buttons.forEach(button => {
-//         button.addEventListener('click', () => {
-//             if (button.classList.contains('button_sectionfirst')) {
-//                 showSection('sectionpink');
-//             } else if (button.classList.contains('button_sectionsecond')) {
-//                 showSection('sectionbw');
-//             }
-//         });
-//     });
+document.addEventListener("DOMContentLoaded", function () {
+    const bwScreen = document.querySelector('.bw');
+    const pinkScreen = document.querySelector('.pink');
+    const knightButton = document.querySelector('.knight_bw');
 
-//     showSection('sectionbw');
-// });
+    knightButton.addEventListener("click", function () {
+        const isPinkActive = pinkScreen.classList.contains("active");
+
+        if (isPinkActive) {
+            pinkScreen.classList.remove("active");
+            bwScreen.classList.add("active");
+        } else {
+            pinkScreen.classList.add("active");
+            bwScreen.classList.remove("active");
+        }
+    });
+});
