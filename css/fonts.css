@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Wolgadeutsche";
+    src: url("../fonts/wolgadeutsche.otf") format("truetype");
+    font-style: bold;
+    font-weight: bold;
+    }
+
+@font-face {
+    font-family: "Coolvetica";
+    src: url("../fonts/coolvetica.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    }
