@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const bw = document.querySelector('.knight.bw');
     const pink = document.querySelector('.knight.pink');
-    const clickArea = document.querySelector('.knight_bw .knight_svg'); 
+    const clickKnight = document.querySelector('.knight_bw .knight_svg'); 
 
-    clickArea.addEventListener("click", function () {
+    clickKnight.addEventListener("click", function () {
         if (bw.style.opacity === "1" || bw.style.opacity === "") {
             bw.style.opacity = "0";
             bw.style.pointerEvents = "none";
