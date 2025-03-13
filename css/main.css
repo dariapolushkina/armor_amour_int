@@ -36,11 +36,42 @@ body{
 }
 .block_1_line {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 30vh;
-    background-color: rgb(232, 232, 232);
+    background-color: rgb(0, 0, 0);
 }
 
+.knight_line {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-left: 80%;
+    width:250%;
+    gap: 4rem;
+    animation: knight_line 15s linear infinite;
+}
+
+@keyframes knight_line {
+    0% {right: 0%}
+    100% {right: 100%}
+}
+
+.knight_line_svg {
+    min-width: 23vh;
+    position: relative;
+    fill: black;
+    stroke: white;
+    stroke-width: 10;
+    transition: fill 0.4s ease, stroke 0.4s ease;
+}
+
+.knight_line_svg:hover {
+    fill: white;
+    stroke: #F970A7;
+}
 
 
 .block_2 {
@@ -107,30 +138,88 @@ body{
 .block_4 {
     position: relative;
     width: 100vw;
-    height: 100vh;
-    background-color: rgb(212, 173, 173);
+    max-height: 100vh;
+    background-color: black;
     display: flex;
     flex-direction: column;
   }
 
 .block_4_top {
+    display: flex;
     position: relative;
-    width: 100%;
-    flex-grow: 1;
-    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    min-height: 73vh;
+    max-height: 73vh;
 }
+
+.forms {
+    position: relative;
+    width: 40vw;
+    background-color: rgb(151, 151, 151); 
+}
+
+.hand {
+    display: flex;
+    justify-content: left;
+    flex-direction: row-reverse;
+    width: 60vw; 
+}
+
+.closed {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    max-width: 60vw;
+    opacity: 1;
+    z-index: 2;
+}
+
+.open {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    max-width: 60vw;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+.hand_closed {
+    position: absolute;
+    width: 70vh;
+    left: -25vw; 
+    top: 15vh;
+}
+
+.hand_open {
+    position: absolute;
+    rotate: -3deg;
+    width: 80vh;
+    left: 7vw;
+    top: 5vh;
+}
+.hand_closed_svg {
+    cursor: pointer;
+}
+.hand_open_svg {
+    cursor: pointer;
+}
+
 
 .block_4_bottom {
     position: relative;
-    width: 100%;
-    min-height: 20vh;
+    width: 100vw;
+    max-height: 27vh;
+    min-height: 2vh;
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-family: 'Wolgadeutsche'; 
-    font-size: 16vw;
+    font-size: min(15.5vw, 29vh);
+    z-index: 99;
 }
 
 .block_5 {
@@ -140,6 +229,7 @@ body{
     background-color: rgb(64, 64, 64);
     font-family: 'Coolvetica'; 
     color: white;
+    z-index: 98;
   }
 
 .bottom_text {

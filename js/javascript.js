@@ -17,3 +17,46 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const closed = document.querySelector('.hand.closed');
+    const open = document.querySelector('.hand.open');
+    const clickHand = document.querySelector('.hand_closed .hand_closed_svg'); 
+
+    clickHand.addEventListener("click", function () {
+        if (closed.style.opacity === "1" || closed.style.opacity === "") {
+            closed.style.opacity = "0";
+            closed.style.pointerEvents = "none";
+            open.style.opacity = "1";
+            open.style.pointerEvents = "auto";
+        } else {
+            closed.style.opacity = "1";
+            closed.style.pointerEvents = "auto";
+            open.style.opacity = "0";
+            open.style.pointerEvents = "none";
+        }
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const closed = document.querySelector('.hand.closed');
+    const open = document.querySelector('.hand.open');
+    const clickHandBack = document.querySelector('.hand_open .hand_open_svg'); 
+
+    clickHandBack.addEventListener("click", function () {
+        if (open.style.opacity === "1" || open.style.opacity === "") {
+            open.style.opacity = "0";
+            open.style.pointerEvents = "none";
+            closed.style.opacity = "1";
+            closed.style.pointerEvents = "auto";
+        } else {
+            open.style.opacity = "1";
+            open.style.pointerEvents = "auto";
+            closed.style.opacity = "0";
+            closed.style.pointerEvents = "none";
+        }
+    });
+});
+
