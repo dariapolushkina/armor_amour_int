@@ -60,3 +60,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const textElement = document.querySelector(".text_2_left");
+    const text = textElement.textContent.trim();
+    textElement.innerHTML = ""; 
+    for (let char of text) {
+        if (char !== " ") { 
+            let span = document.createElement("span");
+            span.classList.add("letter");
+            span.innerHTML = char;
+            textElement.appendChild(span);
+        }
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const textElement = document.querySelector(".text_2_right");
+    const text = textElement.textContent.trim();
+    textElement.innerHTML = ""; 
+    for (let char of text) {
+        if (char !== " ") { 
+            let span = document.createElement("span");
+            span.classList.add("letter");
+            span.innerHTML = char;
+            textElement.appendChild(span);
+        }
+    }
+});
