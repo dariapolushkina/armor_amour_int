@@ -91,7 +91,7 @@ body{
     position: absolute;
     font-family: 'Wolgadeutsche'; 
     font-size: 15vh;
-    line-height: 0.5;
+    line-height: 0.6;
 }
 
 .text_2_right {
@@ -101,7 +101,7 @@ body{
     position: absolute;
     font-family: 'Wolgadeutsche'; 
     font-size: 15vh;
-    line-height: 0.5;
+    line-height: 0.6;
     rotate: 180deg;
 }
 
@@ -112,28 +112,11 @@ body{
 
 .letter {
     display: inline-block;
-    position: relative;  
-    transition: transform 1.5s ease-in-out; 
+    position: relative;
+    transition: transform 4.5s ease-in-out; /* Медленный возврат */
+    cursor: pointer;
+    letter-spacing: -0.05em;
 }
-
-.text_2_left:hover .letter,
-.text_2_right:hover .letter {
-    transition: transform 0.9s ease-out; 
-    transform: translateX(calc(-5vw - 10vw * var(--randX))) 
-               rotate(calc(-10deg - 60deg * var(--randR)));
-}
-
-.text_2_left:not(:hover) .letter,
-.text_2_right:not(:hover) .letter {
-    transition: transform 6.5s ease-in-out; 
-    transform: translateX(0) rotate(0);
-}
-
-.letter:nth-child(odd) { --randX: 0.8; --randR: 0.3; }
-.letter:nth-child(even) { --randX: 7.2; --randR: -0.5; }
-.letter:nth-child(3n) { --randX: 1.5; --randR: 0.1; }
-.letter:nth-child(4n) { --randX: 0.6; --randR: -0.8; }
-.letter:nth-child(5n) { --randX: 1; --randR: 0.5; }
 
 .knight {
     position: absolute;
