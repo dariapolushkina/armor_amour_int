@@ -31,17 +31,27 @@ body{
 .block_1_gif {
     position: relative;
     width: 100vw;
-    height: 70vh;
-    background-color: rgb(139, 139, 139);
+    height: 73vh;
+    background-color: #ffffff;
 }
+
+.first {
+    z-index: 20;
+    position: relative;
+    width: 100vw;
+    height: 73vh;
+    object-fit: cover;
+}
+
 .block_1_line {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 30vh;
+    height: 27vh;
     background-color: rgb(0, 0, 0);
+    z-index: 100;
 }
 
 .knight_line {
@@ -50,6 +60,7 @@ body{
     position: relative;
     margin-left: 80%;
     width:250%;
+    top: 0vh;
     gap: 4rem;
     animation: knight_line 15s linear infinite;
 }
@@ -60,7 +71,7 @@ body{
 }
 
 .knight_line_svg {
-    min-width: 23vh;
+    min-width: 20vh;
     position: relative;
     fill: black;
     stroke: white;
@@ -85,6 +96,7 @@ body{
 }
 
 .text_2_left{
+    z-index: 5;
     top: -6vh;
     left: -7vw;
     width: 30vw;
@@ -95,6 +107,7 @@ body{
 }
 
 .text_2_right {
+    z-index: 5;
     top: -6vh;
     right: -7vw;
     width: 30vw;
@@ -113,7 +126,7 @@ body{
 .letter {
     display: inline-block;
     position: relative;
-    transition: transform 4.5s ease-in-out; /* Медленный возврат */
+    transition: transform 4.5s ease-in-out; 
     cursor: pointer;
     letter-spacing: -0.05em;
 }
@@ -146,8 +159,64 @@ body{
     pointer-events: none;
 }
 
+.light_gif {
+    position: absolute;
+    width: 100vw;
+    object-fit: cover;
+    scale: 130%;
+    left: 1vw;
+}
+.swords {
+    z-index: 999;
+    position: absolute;
+    top: -15vh;
+}
+
+.sword_svg {
+    background-color: beige;
+    position: relative;
+    top: 25vh;
+    left: 25vw;
+    width: 28vw;
+    fill: rgb(255, 255, 255);
+    stroke: rgb(0, 0, 0);
+    stroke-width: 8;
+    transition: fill 0.2s ease, stroke 0.2s ease;
+    pointer-events: fill;
+    cursor: pointer;
+}
+
+.s1 {
+    position: absolute;
+    rotate: 130deg;
+    left: -22vw;
+    top: 30vh;
+}
+
+.s2 {
+    position: absolute;
+    rotate: 135deg;
+    left: -28vw;
+    top: 45vh;
+}
+
+.s3 {
+    position: absolute;
+    rotate: 130deg;
+}
+
+.s4 {
+    position: absolute;
+    rotate: 130deg;
+}
+    
+.sword_svg:hover {
+    fill: rgb(0, 0, 0);
+    stroke: #000000;
+}
 
 .knight_bw_image {
+    z-index: 200;
     position: relative;
     width: 90vh;
     height: 90vh;
@@ -157,6 +226,16 @@ body{
 
 .knight_svg {
     cursor: pointer;
+}
+
+
+.knight_svg,
+.knight.bw,
+.knight.pink {
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
 }
 
 
