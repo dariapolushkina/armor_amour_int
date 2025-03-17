@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Wolgadeutsche";
-    src: url("../fonts/wolgadeutsche.otf") format("truetype");
+    src: url("../fonts/wolgadeutsche.otf") format("opentype");
     font-style: bold;
     font-weight: bold;
     }

@@ -65,11 +65,6 @@ body{
     animation: knight_line 15s linear infinite;
 }
 
-@keyframes knight_line {
-    0% {right: 0%}
-    100% {right: 100%}
-}
-
 .knight_line_svg {
     min-width: 20vh;
     position: relative;
@@ -231,7 +226,8 @@ body{
 
 .knight_svg,
 .knight.bw,
-.knight.pink {
+.knight.pink, 
+.shine {
     user-select: none; 
     -webkit-user-select: none; 
     -moz-user-select: none; 
@@ -388,29 +384,3 @@ body{
     font-family: 'Wolgadeutsche';
     font-size: 6vw; 
 }
-
-/* .shine {
-    
-    background: linear-gradient(90deg, #ffffff, #000000, #ffffff);
-    letter-spacing: 5px;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-repeat: no-repeat;
-    background-size: 80%;
-    animation: shine 3s linear infinite;
-  }
-   */
-  @keyframes shine {
-    0% {
-      background-position-x: -500%;
-    }
-    100% {
-      background-position-x: 500%;
-    }
-  }
-  
-
-  .armor.amour {
-    z-index: 1;
-  }
