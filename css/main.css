@@ -410,3 +410,7 @@ body{
     }
   }
   
+
+  .armor.amour {
+    z-index: 1;
+  }
