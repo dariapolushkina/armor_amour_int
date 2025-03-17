@@ -3,16 +3,26 @@ document.addEventListener("DOMContentLoaded", function () {
     let bw = document.querySelector('.knight.bw');
     let pink = document.querySelector('.knight.pink');
     let clickKnight = document.querySelector('.knight_bw .knight_svg');
+    let swordSvgs = document.querySelectorAll('.swords .sword_svg'); // Все мечи внутри swords
 
-    clickKnight.addEventListener("click", function () {
+    function toggleScreens() {
         let isBwVisible = bw.style.opacity === "1" || bw.style.opacity === "";
+
         bw.style.opacity = isBwVisible ? "0" : "1";
         bw.style.pointerEvents = isBwVisible ? "none" : "auto";
         pink.style.opacity = isBwVisible ? "1" : "0";
         pink.style.pointerEvents = isBwVisible ? "auto" : "none";
+
         clickKnight.style.opacity = isBwVisible ? "0" : "1";
         clickKnight.style.pointerEvents = "auto";
-    });
+
+        swordSvgs.forEach(sword => {
+            sword.style.pointerEvents = isBwVisible ? "none" : "auto";
+        });
+    }
+
+    clickKnight.addEventListener("click", toggleScreens);
+    
 
     // текст уходит от мыши
     let textAwayLeft = document.querySelector(".text_2_left");

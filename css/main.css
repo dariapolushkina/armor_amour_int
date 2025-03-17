@@ -155,6 +155,7 @@ body{
 }
 
 .light_gif {
+    z-index: 999;
     position: absolute;
     width: 100vw;
     object-fit: cover;
@@ -162,20 +163,18 @@ body{
     left: 1vw;
 }
 .swords {
-    z-index: 999;
+    z-index: 998;
     position: absolute;
     top: -15vh;
 }
 
 .sword_svg {
-    background-color: beige;
     position: relative;
     top: 25vh;
     left: 25vw;
-    width: 28vw;
-    fill: rgb(255, 255, 255);
+    width: 8vw;
     stroke: rgb(0, 0, 0);
-    stroke-width: 8;
+    stroke-width: 2.8;
     transition: fill 0.2s ease, stroke 0.2s ease;
     pointer-events: fill;
     cursor: pointer;
@@ -183,31 +182,41 @@ body{
 
 .s1 {
     position: absolute;
-    rotate: 130deg;
-    left: -22vw;
-    top: 30vh;
+    rotate: 75deg;
+    left: -24vw;
+    top: 5vh;
 }
 
 .s2 {
     position: absolute;
-    rotate: 135deg;
-    left: -28vw;
-    top: 45vh;
+    rotate: 68deg;
+    left: -32vw;
+    top: 24vh;
 }
 
 .s3 {
     position: absolute;
-    rotate: 130deg;
+    rotate: 53deg;
+    left: -30vw;
+    top: 40vh;
 }
 
 .s4 {
     position: absolute;
-    rotate: 130deg;
+    rotate: -46deg;
+    left: 19vw;
+    top: 37vh;
+}
+
+.s5 {
+    position: absolute;
+    rotate: -63deg;
+    left: 20vw;
+    top: 15vh;
 }
     
-.sword_svg:hover {
+.sword_svg:hover path{
     fill: rgb(0, 0, 0);
-    stroke: #000000;
 }
 
 .knight_bw_image {
