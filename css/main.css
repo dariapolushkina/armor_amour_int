@@ -378,14 +378,6 @@ body{
     align-items: center;
     width: 100%;
     padding: 0 3vw; 
-    background: linear-gradient(90deg, #000000, #ffffff, #000000);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-repeat: no-repeat;
-    background-size: 80%;
-    animation: shine 3s linear infinite;
-    animation-delay: 0.3s; 
 }
 
 .text {
