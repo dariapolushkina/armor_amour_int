@@ -4,6 +4,13 @@
 }
 
 
+@keyframes pulseSmallGlow {
+    0% { filter: drop-shadow(0 0 0.5vw #F970A7); }
+    50% { filter: drop-shadow(0 0 1.5vw #F970A7); }
+    100% { filter: drop-shadow(0 0 0.5vw #F970A7); }
+}
+
+
 @keyframes shine {
     0% {
       background-position-x: -500%;
@@ -12,4 +19,27 @@
       background-position-x: 500%;
     }
   }
+
+
+  @keyframes fadeOutBlur {
+    0% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+    100% {
+        opacity: 0;
+        filter: blur(15px);
+    }
+}
+
+@keyframes fadeInClear {
+    0% {
+        opacity: 0;
+        filter: blur(15px);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
   

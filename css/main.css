@@ -77,6 +77,7 @@ body{
 .knight_line_svg:hover {
     fill: white;
     stroke: #F970A7;
+    animation: pulseSmallGlow 3s infinite alternate ease-in-out;
 }
 
 
@@ -118,7 +119,7 @@ body{
     cursor: pointer;
 }
 
-.letter {
+.bukva {
     display: inline-block;
     position: relative;
     transition: transform 4.5s ease-in-out; 
@@ -144,15 +145,53 @@ body{
     z-index: 2;
 }
 
+
+.knight_bw {
+    position: relative;
+    overflow: visible; 
+}
+
+.knight_svg {
+    transition: filter 1.5s ease-in-out;
+}
+
+.knight_svg:hover {
+    animation: pulseGlow 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0% {
+        filter: drop-shadow(0 0 0vw #F970A7);
+    }
+    100% {
+        filter: drop-shadow(0 0 1vw #F970A7);
+    }
+}
+
 .pink {
     width: 100vw;
     height: 100vh; 
-    background-color: rgb(237, 172, 172);
     font-size: 10vw;
     opacity: 0;
     z-index: 1;
     pointer-events: none;
 }
+
+.word {
+    font-family: 'Coolvetica'; 
+    color: white;
+    font-size: 3.3vw;
+    z-index: 1000;
+    position: absolute;
+    cursor: pointer;
+    text-shadow: 0 0 0.6vw rgba(255, 255, 255, 1);
+    transition: opacity 1s ease, filter 1.5s ease;
+}
+
+#word1 { top: 30%; left: 75%; }
+#word2 { top: 40%; left: 10%; }
+#word3 { top: 75%; left: 80%; }
+
 
 .light_gif {
     z-index: 999;
@@ -176,22 +215,41 @@ body{
     stroke: rgb(0, 0, 0);
     stroke-width: 2.8;
     transition: fill 0.2s ease, stroke 0.2s ease;
-    pointer-events: fill;
-    cursor: pointer;
 }
 
+
+
+  .s1:hover {
+    transform: translate(1vw, 3vw);
+  }
+  .s2:hover {
+    transform: translate(1vw, 3vw);
+  }
+  .s3:hover {
+    transform: translate(1vw, 3vw);
+  }
+  .s4:hover {
+    transform: translate(1vw, 3vw);
+  }
+  .s5:hover {
+    transform: translate(1vw, 3vw);
+  }
+
+  
 .s1 {
     position: absolute;
     rotate: 75deg;
     left: -24vw;
-    top: 5vh;
+    top: 3vh;
+    transition: transform 0.3s ease-out;
 }
 
 .s2 {
     position: absolute;
     rotate: 68deg;
     left: -32vw;
-    top: 24vh;
+    top: 20vh;
+    transition: transform 0.3s ease-out;
 }
 
 .s3 {
@@ -199,6 +257,7 @@ body{
     rotate: 53deg;
     left: -30vw;
     top: 40vh;
+    transition: transform 0.3s ease-out;
 }
 
 .s4 {
@@ -206,6 +265,7 @@ body{
     rotate: -46deg;
     left: 19vw;
     top: 37vh;
+    transition: transform 0.3s ease-out;
 }
 
 .s5 {
@@ -213,6 +273,7 @@ body{
     rotate: -63deg;
     left: 20vw;
     top: 15vh;
+    transition: transform 0.3s ease-out;
 }
     
 .sword_svg:hover path{
@@ -225,13 +286,11 @@ body{
     width: 90vh;
     height: 90vh;
     bottom: 2vh;
-    left: 1vw; 
 }
 
 .knight_svg {
     cursor: pointer;
 }
-
 
 .knight_svg,
 .knight.bw,
@@ -249,8 +308,66 @@ body{
     width: 100vw;
     height: 100vh;
     background-color: rgb(175, 175, 175);
+    font-family: 'wolgadeutsche';
+    font-size: 6rem;
+    color: white;
   } 
 
+.block_3_black {
+    position: relative;
+    height: 70vh;
+    background-color: black;
+    line-height: 5.5rem;
+}
+
+.block_3_star {
+    background-color: rgb(0, 0, 0);
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 15vw; 
+}
+
+.star_3 {
+    width: 45vw;
+}
+
+.star_3 path {
+    stroke: rgb(255, 255, 255);
+    stroke-width: 2;
+}
+
+.micro_star_3 {
+    width: 5vw;
+    position: absolute; 
+   
+}
+
+.left {
+    left: 10vw;
+    top: 33vh;
+}
+
+.right {
+    right: 10vw;
+    top: 33vh;
+}
+
+.block_3_text {
+    height: 40vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.white {
+    height: 30vh;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+}
 
 .block_4 {
     position: relative;
@@ -393,3 +510,5 @@ body{
     font-family: 'Wolgadeutsche';
     font-size: 6vw; 
 }
+
+
