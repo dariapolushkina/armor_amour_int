@@ -271,7 +271,6 @@
     overflow: visible;
     stroke-width: 4;
     stroke: #F970A7;
-    fill: white;
 }
 
     
@@ -289,7 +288,7 @@
     }
 
     .first {
-        height: 29vh;
+        height: 30vh;
         width: 100vw;
         top: 2vh;
         scale: 180%;
@@ -454,7 +453,7 @@
 }
 
 .forms {
-    top: -10vh;
+    top: -8vh;
     left: 30%;
     
 }
@@ -473,7 +472,7 @@
     position: absolute; 
     z-index: 1000;
     width: 25vw;
-    top: 32vh;
+    top: 31vh;
     left: 7.5vw;
     animation: neostropulse 3s infinite alternate ease-in-out, pulsestarGlow 3s infinite ease-in-out;
 }
@@ -482,7 +481,6 @@
     overflow: visible;
     stroke-width: 4;
     stroke: #F970A7;
-    fill: white;
 }
 
 .closed {
@@ -510,7 +508,7 @@
     rotate: 0deg;
     height: 38vh;
     left: -23vw;
-    top: -50vh;
+    top: -47vh;
     width: 84vw;
     overflow: visible;
 }

@@ -503,13 +503,10 @@ body{
 
 .neostro {
     overflow: visible;
-    fill: white;
+    fill: none;
     stroke: #F970A7;
     stroke-width: 3;
-}
-
-.neostro:hover path {
-    animation: pulsestarGlow 3s infinite alternate ease-in-out;
+    animation: pulsestarGlow 3s infinite alternate ease-in-out, pulse 3s infinite;
 }
 
 .hand {
