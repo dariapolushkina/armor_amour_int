@@ -93,9 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateImage() {
         let image = document.querySelector('.knight_light img');
         if (window.innerWidth < 1026) {
-            image.src = '../images/light_adaptive.gif';  
+            image.src = './images/light_adaptive.gif';  
         } else {
-            image.src = '../images/light.GIF';  
+            image.src = './images/light.GIF';  
         }
     }
 
