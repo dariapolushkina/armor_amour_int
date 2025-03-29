@@ -1,0 +1,570 @@
+@media screen and (max-width: 1026px) {
+
+    .knight_line {
+        gap: 3rem;
+    }
+
+    .knight_line_svg {
+        min-width: 17vh;
+    }
+
+    .block_2 {
+        height: 100vh;
+        align-items: start;
+    }
+
+    .bw {
+        height: 100vh; 
+    }
+
+    .knight_bw_image {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .knight_bw {
+        top: 20vh;
+        height: 73vh;
+    }
+
+    .text_2_left{
+        top: -6vh;
+        left: -12vw;
+        width: 30vw;
+        font-size: 12vw;
+        line-height: 0.7;
+    }
+
+    .text_2_right {
+        top: -6vh;
+        right: -12vw;
+        width: 30vw;
+        font-size: 12vw;
+        line-height: 0.7;
+    }
+
+    .light_gif {
+        height: 100vh;
+        top: -9vh;
+        scale: 120%;
+        left: -1vw;
+    }
+
+    .word {
+        font-size: 5.3vw;
+    }
+
+    #word1 { top: 12%; left: 65%; }
+    #word2 { top: 25%; left: 5%; }
+    #word3 { top: 45%; left: 80%; }
+
+
+    .swords {
+        top: -18vh;
+    }
+    .sword_svg {
+        height: 35vh;
+        width: 12vw;
+    }
+      
+    .s1 {
+        rotate: 133deg;
+        left: -38vw;
+        top: 25vh;
+    }
+    
+    .s2 {
+        stroke-width: 3.2;
+        width: 10vw;
+        rotate: 115deg;
+        left: -38vw;
+        top: 45vh;
+    }
+    
+    .s3 {
+        rotate: -140deg;
+        left: 23vw;
+        top: 20vh;
+    }
+    
+    .s4 {
+        stroke-width: 3.2;
+        width: 10vw;
+        rotate: 160deg;
+        left: -15vw;
+        top: 16vh;
+    }
+    
+    .s5 {
+        stroke-width: 3.2;
+        width: 10vw;
+        rotate: 240deg;
+        left: 27vw;
+        top: 45vh;
+    }
+
+
+
+
+.block_3 {
+    height: 84vh;
+    font-size: 14vw;
+    line-height: 10vh;
+  } 
+
+.block_3_black {
+    height: 64vh;
+}
+
+
+.block_3_text {
+    height: 40vh;
+}
+
+.white {
+    height: 21vh;
+}
+
+.star_3 {
+    position: relative;
+    top: 2.5vh;
+}
+
+.micro_star_3 {
+    top: 34.5vh;
+    width: 8vw;
+    stroke-width: 5;
+    position: absolute;
+    animation: pulse 3s infinite alternate ease-in-out;
+}
+
+
+
+
+
+.block_4 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.block_4_top {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.forms {
+    z-index: 1000;
+    top: -8vh;
+    left: 33%;
+}
+
+.ostro_1_svg, .ostro_2_svg, .ostro_3_svg {
+    position: absolute;
+    rotate: 90deg;
+    height: 45vh;
+}
+.miniostro_1_svg, .miniostro_2_svg, .miniostro_3_svg {
+    rotate: 90deg;
+    height: 35vh;
+}
+
+.neostro_1_svg, .neostro_2_svg, .neostro_3_svg {
+    position: absolute;
+    rotate: 90deg;
+    height: 45vh;
+}
+.mini_neostro_1_svg, .mini_neostro_2_svg, .mini_neostro_3_svg {
+    rotate: 90deg;
+    height: 35vh;
+}
+
+
+.closed {
+    top: 25vh;
+    left: 35vw;
+}
+
+.open {
+    top: 25vh;
+    left: 30vw;
+}
+
+
+.hand {
+    flex-direction: column;
+    width: 20vw; 
+
+}
+
+.hand_closed {
+    top: -56vh;
+    left: -20vw;
+    height: 65vw;
+    width: 65vw;
+}
+
+.hand_open {
+    rotate: 0deg;
+    height: 70vw;
+    left: -16vw;
+    top: -60vh;
+    width: 70vw;
+    overflow: visible;
+}
+
+.hand_open_svg {
+    rotate: -4deg;
+}
+
+
+.block_4_bottom {
+    top: 8vh;
+    max-height: 15vh;
+    min-height: 10vh;
+}
+
+
+
+
+.block_5 {
+    top: 2vh;
+    width: 100vw;
+    height: 20vh;
+  }
+
+.bottom_text {
+    top: 1vh;
+    font-size: 5vw;
+}
+
+.bottom_bottom_text {
+    top: 8vh;
+}
+
+
+.text {
+    font-size: 7vw; 
+}
+
+.text2 {
+    font-size: 7vw; 
+}
+
+.ne_ostro_white {
+    position: absolute; 
+    z-index: 1000;
+    width: 25vw;
+    top: 25vh;
+    left: 5vw;
+    animation: neostropulse 3s infinite alternate ease-in-out, pulsestarGlow 3s infinite ease-in-out;
+}
+
+.neostro {
+    overflow: visible;
+    stroke-width: 4;
+    stroke: #F970A7;
+    fill: white;
+}
+
+    
+  }
+  
+  @media screen and (max-width: 768px) {
+
+    .block_1 {
+        height: 40vh;
+    }
+
+    .block_1_gif {
+        width: 100vw;
+        max-height: 29vh;
+    }
+
+    .first {
+        height: 29vh;
+        width: 100vw;
+        top: 2vh;
+        scale: 180%;
+    }
+
+    .block_1_line{
+        max-height: 12vh;
+    }
+
+    .knight_line {
+        gap: 2rem;
+    }
+
+    .knight_line_svg {
+        min-width: 8vh;
+        stroke-width: 11;
+    }
+
+
+    .block_2 {
+        height: 60vh;
+        align-items: start;
+    }
+
+    .bw {
+        height: 60vh; 
+    }
+
+    .knight_bw_image {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .knight_bw {
+        top: 50vh;
+        height: 43vh;
+    }
+
+    .text_2_left{
+        top: -6vh;
+        left: -14vw;
+        width: 30vw;
+        font-size: 12vw;
+        line-height: 0.7;
+    }
+
+    .text_2_right {
+        top: -6vh;
+        right: -14vw;
+        width: 30vw;
+        font-size: 12vw;
+        line-height: 0.7;
+    }
+
+    .light_gif {
+        height: 60vh;
+        top: -5vh;
+        scale: 119%;
+        left: 0vw;
+    }
+
+    .word {
+        font-size: 7.3vw;
+    }
+
+    #word1 { top: 5%; left: 55%; }
+    #word2 { top: 13%; left: 5%; }
+    #word3 { top: 25%; left: 75%; }
+
+    .swords {
+        top: -19vh;
+    }
+
+    .sword_svg {
+        height: 25vh;
+        width: 12vw;
+    }
+  
+      
+    .s1 {
+        rotate: 133deg;
+        left: -38vw;
+        top: 20vh;
+    }
+    
+    .s2 {
+        width: 10vw;
+        rotate: 115deg;
+        left: -38vw;
+        top: 35vh;
+    }
+    
+    .s3 {
+        rotate: -140deg;
+        left: 22vw;
+        top: 18vh;
+    }
+    
+    .s4 {
+        width: 10vw;
+        rotate: 160deg;
+        left: -15vw;
+        top: 16vh;
+    }
+    
+    .s5 {
+        width: 10vw;
+        rotate: 240deg;
+        left: 27vw;
+        top: 33vh;
+    }
+
+    .block_3 {
+        height: 69vh;
+        font-size: 14vw;
+        line-height: 7vh;
+      } 
+    
+    .block_3_black {
+        height: 54vh;
+    }
+    
+    .block_3_text {
+        height: 30vh;
+    }
+    
+    .white {
+        height: 15vh;
+    }
+    
+    .star_3 {
+        position: relative;
+        top: 2.5vh;
+    }
+    
+    .micro_star_3 {
+        top: 33.5vh;
+        width: 9vw;
+        stroke-width: 8;
+    }
+    
+
+
+
+.block_4 {
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.block_4_top {
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.forms {
+    top: -10vh;
+    left: 30%;
+    
+}
+
+.ostro_1_svg, .ostro_2_svg, .ostro_3_svg {
+    position: absolute;
+    rotate: 90deg;
+    width: 40vw;
+}
+.miniostro_1_svg, .miniostro_2_svg, .miniostro_3_svg {
+    rotate: 90deg;
+    width: 25vw;
+}
+
+.ne_ostro_white {
+    position: absolute; 
+    z-index: 1000;
+    width: 25vw;
+    top: 32vh;
+    left: 7.5vw;
+    animation: neostropulse 3s infinite alternate ease-in-out, pulsestarGlow 3s infinite ease-in-out;
+}
+
+.neostro {
+    overflow: visible;
+    stroke-width: 4;
+    stroke: #F970A7;
+    fill: white;
+}
+
+.closed {
+    top: 25vh;
+    left: 35vw;
+}
+
+.open {
+    top: 25vh;
+    left: 30vw;
+}
+
+
+.hand {
+    flex-direction: column;
+    width: 20vw; 
+}
+
+.hand_closed {
+    top: -45vh;
+    width: 76vw;
+}
+
+.hand_open {
+    rotate: 0deg;
+    height: 38vh;
+    left: -23vw;
+    top: -50vh;
+    width: 84vw;
+    overflow: visible;
+}
+
+.hand_open_svg {
+    rotate: -4deg;
+}
+
+
+.block_4_bottom {
+    top: 5vh;
+    max-height: 15vh;
+    min-height: 10vh;
+}
+
+
+
+.block_5 {
+    top: 5vh;
+    width: 100vw;
+    height: 30vh;
+    font-family: 'Coolvetica'; 
+    color: white;
+    z-index: 98;
+  }
+
+.bottom_text {
+    top: 8vh;
+    font-size: 5vw;
+}
+
+.bottom_bottom_text {
+    top: 13vh;
+    align-items: first baseline;
+    position: absolute;
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+}
+
+.b_b_t_all {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 3vw; 
+}
+
+.text {
+    font-size: 7vw; 
+}
+
+.text2 {
+    font-family: 'Wolgadeutsche';
+    font-size: 7vw; 
+}
+
+}

@@ -23,10 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     clickKnight.addEventListener("click", toggleScreens);
 
-
-
-
-
     // текст уходит от мыши
     document.querySelectorAll(".text_2_left, .text_2_right").forEach(block => {
         let text = block.textContent.trim();
@@ -71,8 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-
-
     // слова на розовом экране
     document.querySelectorAll(".sword_svg").forEach(sword => {
         sword.addEventListener("mouseenter", () => animateBukvy(sword, true));
@@ -96,17 +90,48 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    function updateImage() {
+        let image = document.querySelector('.knight_light img');
+        if (window.innerWidth < 1026) {
+            image.src = './images/light_adaptive.gif';  
+        } else {
+            image.src = './images/light.GIF';  
+        }
+    }
 
+    window.addEventListener('resize', updateImage);
+    updateImage();
 
-    
     // кулак-ладонь
     let closed = document.querySelector(".hand.closed");
     let open = document.querySelector(".hand.open");
+
     let clickHand = document.querySelector(".hand_closed .hand_closed_svg");
     let clickHandBack = document.querySelector(".hand_open .hand_open_svg");
 
+    let ostro1 = document.querySelector(".ostro_1");
+    let ostro2 = document.querySelector(".ostro_2");
+    let ostro3 = document.querySelector(".ostro_3");
+    let neOstro = document.querySelector(".ne_ostro_1");
+
+    neOstro.style.opacity = "0";
+    neOstro.style.pointerEvents = "none";
+
     function toggleHand() {
         let isClosedVisible = closed.style.opacity === "1" || closed.style.opacity === "";
+
+        ostro1.style.opacity = isClosedVisible ? "0" : "1";
+        ostro1.style.pointerEvents = isClosedVisible ? "none" : "auto";
+
+        ostro2.style.opacity = isClosedVisible ? "0" : "1";
+        ostro2.style.pointerEvents = isClosedVisible ? "none" : "auto";
+
+        ostro3.style.opacity = isClosedVisible ? "0" : "1";
+        ostro3.style.pointerEvents = isClosedVisible ? "none" : "auto";
+
+        neOstro.style.opacity = isClosedVisible ? "1" : "0";
+        neOstro.style.pointerEvents = isClosedVisible ? "auto" : "none";
+
         closed.style.opacity = isClosedVisible ? "0" : "1";
         closed.style.pointerEvents = isClosedVisible ? "none" : "auto";
         open.style.opacity = isClosedVisible ? "1" : "0";
@@ -116,4 +141,26 @@ document.addEventListener("DOMContentLoaded", function () {
     clickHand.addEventListener("click", toggleHand);
     clickHandBack.addEventListener("click", toggleHand);
 
+    let block_3_words = document.querySelectorAll(".block_3_text p");
+
+    block_3_words.forEach((block_3_word) => {
+        block_3_word.addEventListener("click", () => {
+            block_3_word.classList.add("clicked");
+            setTimeout(() => {
+                block_3_word.classList.remove("clicked");
+            }, 400);
+        });
+    });
+
+    let shinewords = document.querySelectorAll(".block_3_text.white p");
+
+    shinewords.forEach((word) => {
+        word.addEventListener("click", () => {
+            if (word.classList.contains("shine")) {
+                word.classList.remove("shine");
+            } else {
+                word.classList.add("shine");
+            }
+        });
+    });
 });

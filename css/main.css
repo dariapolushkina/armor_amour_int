@@ -7,7 +7,7 @@ body{
   position: relative;
   max-width: 100%;
   display: block;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
 }
 
 .container {
@@ -22,13 +22,15 @@ body{
 } 
 
 .block_1 {
+
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    background-color: rgb(155, 132, 132);
   }
 
 .block_1_gif {
+    overflow: hidden;
     position: relative;
     width: 100vw;
     height: 73vh;
@@ -42,6 +44,7 @@ body{
     height: 73vh;
     object-fit: cover;
 }
+
 
 .block_1_line {
     position: relative;
@@ -309,20 +312,21 @@ body{
     height: 100vh;
     background-color: rgb(175, 175, 175);
     font-family: 'wolgadeutsche';
-    font-size: 6rem;
+    font-size: 15vh;
     color: white;
+    line-height: 15vh;
   } 
 
 .block_3_black {
     position: relative;
     height: 70vh;
     background-color: black;
-    line-height: 5.5rem;
+    
 }
 
 .block_3_star {
     background-color: rgb(0, 0, 0);
-    height: 30vh;
+    height: 28vh;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -330,18 +334,23 @@ body{
 }
 
 .star_3 {
-    width: 45vw;
+    height: 20vh;
+    fill: black;
+    stroke: white;
+    stroke-width: 27;
+    animation: antipulse 3s infinite alternate ease-in-out;
 }
 
-.star_3 path {
-    stroke: rgb(255, 255, 255);
-    stroke-width: 2;
-}
-
-.micro_star_3 {
-    width: 5vw;
-    position: absolute; 
-   
+@keyframes antipulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95); 
+    }
+    100% {
+        transform: scale(1); 
+    }
 }
 
 .left {
@@ -354,6 +363,33 @@ body{
     top: 33vh;
 }
 
+.micro_star_3 {
+    width: 5vw;
+    stroke-width: 5;
+    position: absolute;
+    animation: pulse 3s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1); 
+    }
+    50% {
+        transform: scale(1.1); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
+
+
+.star_3:hover path {
+    fill: white;
+    stroke: #F970A7;
+    animation: pulsestarGlow 3s infinite alternate ease-in-out;
+}
+
 .block_3_text {
     height: 40vh;
     position: relative;
@@ -361,12 +397,53 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+@keyframes shakeNo {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Применяем анимацию при клике */
+.block_3_text p {
+    display: inline-block; /* Нужно для корректной анимации */
+    cursor: pointer;
+}
+
+.block_3_black p.clicked {
+    animation: shakeNo 0.4s ease-in-out;
+}
+
+.block_3 p {
+    transition: transform 0.3s ease; 
+}
+
+.block_3 p:hover {
+    transform: scale(1.05); 
 }
 
 .white {
     height: 30vh;
     background-color: rgb(255, 255, 255);
     color: #000000;
+    transition: background-color 0.3s ease;
+}
+
+
+.block_3_text.white p.shine {
+    color: white;
+    -webkit-text-stroke: 0.1vw #ffffff; 
+    animation: whiteGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes whiteGlow {
+    0% { filter: drop-shadow(0 0 0.5vw #F970A7); }
+    50% { filter: drop-shadow(0 0 1vw #F970A7); }
+    100% { filter: drop-shadow(0 0 0.5vw #F970A7); }
 }
 
 .block_4 {
@@ -389,7 +466,50 @@ body{
 .forms {
     position: relative;
     width: 40vw;
-    background-color: rgb(151, 151, 151); 
+    left: 10vw;
+}
+
+
+.ostro_1, .ostro_2, .ostro_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 73vh;
+    position: absolute; 
+}
+
+.ostro_1_svg, .miniostro_1_svg, .ostro_2_svg, .miniostro_2_svg, .ostro_3_svg, .miniostro_3_svg {
+    scale: 85%;
+    position: absolute;
+    opacity: 0;
+}
+
+.ostro_1_svg { animation: switchOstro 2.2s steps(1) infinite, pulse 1.8s ease-in-out infinite; }
+.ostro_2_svg { animation: switchOstro 2.2s steps(1) infinite, pulse 1.8s ease-in-out infinite; animation-delay: 0.73s; }
+.ostro_3_svg { animation: switchOstro 2.2s steps(1) infinite, pulse 1.8s ease-in-out infinite; animation-delay: 1.46s; }
+
+.miniostro_1_svg { animation: switchMiniOstro 1.1s steps(1) infinite, pulse 1.5s ease-in-out infinite; }
+.miniostro_2_svg { animation: switchMiniOstro 1.1s steps(1) infinite, pulse 1.5s ease-in-out infinite; animation-delay: 0.36s; }
+.miniostro_3_svg { animation: switchMiniOstro 1.1s steps(1) infinite, pulse 1.5s ease-in-out infinite; animation-delay: 0.72s; }
+
+.ne_ostro_white {
+    position: absolute; 
+    z-index: 1000;
+    width: 15vw;
+    top: 26vh;
+    left: 7vw;
+}
+
+.neostro {
+    overflow: visible;
+    fill: white;
+    stroke: #F970A7;
+    stroke-width: 3;
+}
+
+.neostro:hover path {
+    animation: pulsestarGlow 3s infinite alternate ease-in-out;
 }
 
 .hand {
@@ -459,7 +579,7 @@ body{
 .block_5 {
     position: relative;
     width: 100vw;
-    height: 27vw;
+    height: 20vh;
     background-color: rgb(0, 0, 0);
     font-family: 'Coolvetica'; 
     color: white;
@@ -468,6 +588,7 @@ body{
 
 .bottom_text {
     position: absolute;
+    top: 2vh;
     width: 100vw;
     height: 7vw;
     background-color: rgb(0, 0, 0);
@@ -475,18 +596,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    background: linear-gradient(90deg, #000000, #ffffff, #000000);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-repeat: no-repeat;
-    background-size: 80%;
-    animation: shine 3s linear infinite;
 }
 
+
 .bottom_bottom_text {
-    top: 6vw;
+    top: 15vh;
     align-items: first baseline;
     position: absolute;
     width: 100vw;

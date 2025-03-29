@@ -10,15 +10,38 @@
     100% { filter: drop-shadow(0 0 0.5vw #F970A7); }
 }
 
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 0.5vw #F970A7); }
+    50% { filter: drop-shadow(0 0 1.5vw #F970A7); }
+    100% { filter: drop-shadow(0 0 0.5vw #F970A7); }
+}
 
-@keyframes shine {
-    0% {
-      background-position-x: -500%;
-    }
-    100% {
-      background-position-x: 500%;
-    }
-  }
+@keyframes pulsestarGlow {
+    0% { filter: drop-shadow(0 0 0.5vw #F970A7); }
+    50% { filter: drop-shadow(0 0 5.5vw #F970A7); }
+    100% { filter: drop-shadow(0 0 0.5vw #F970A7); }
+}
+
+@keyframes switchOstro {
+    0% { opacity: 1; transform: scale(1); }
+    33.3% { opacity: 0; transform: scale(1.1); }
+    66.6% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes switchMiniOstro {
+    0% { opacity: 1; transform: scale(1); }
+    33.3% { opacity: 0; transform: scale(1.1); }
+    66.6% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
 
 
   @keyframes fadeOutBlur {
