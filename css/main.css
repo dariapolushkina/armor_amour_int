@@ -504,7 +504,7 @@ body{
 .neostro {
     overflow: visible;
     fill: none;
-    stroke: #F970A7;
+    stroke: #ffffff;
     stroke-width: 3;
     animation: pulsestarGlow 3s infinite alternate ease-in-out, pulse 3s infinite;
 }

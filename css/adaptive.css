@@ -207,14 +207,14 @@
 .hand_closed {
     top: -56vh;
     left: -20vw;
-    height: 65vw;
+    height: 60vw;
     width: 65vw;
 }
 
 .hand_open {
     rotate: 0deg;
-    height: 70vw;
-    left: -16vw;
+    height: 65vw;
+    left: -12vw;
     top: -60vh;
     width: 70vw;
     overflow: visible;
@@ -270,7 +270,6 @@
 .neostro {
     overflow: visible;
     stroke-width: 4;
-    stroke: #F970A7;
 }
 
     
@@ -472,7 +471,7 @@
     position: absolute; 
     z-index: 1000;
     width: 25vw;
-    top: 31vh;
+    top: 30vh;
     left: 7.5vw;
     animation: neostropulse 3s infinite alternate ease-in-out, pulsestarGlow 3s infinite ease-in-out;
 }
@@ -480,7 +479,6 @@
 .neostro {
     overflow: visible;
     stroke-width: 4;
-    stroke: #F970A7;
 }
 
 .closed {
@@ -500,13 +498,13 @@
 }
 
 .hand_closed {
-    top: -45vh;
+    top: -40vh;
     width: 76vw;
 }
 
 .hand_open {
     rotate: 0deg;
-    height: 38vh;
+    height: 36vh;
     left: -23vw;
     top: -47vh;
     width: 84vw;
